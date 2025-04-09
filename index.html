@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomasz Szmajda | Freelance Developer</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="description" content="Portfolio Tomasz Szmajda - WordPress Developer i Frontend Specialist">
+<meta property="og:title" content="Tomasz Szmajda | Portfolio">
+
+</head>
+<body>
+    <div id="global-loader">
+        <div class="loader-logo">
+          <span>T</span><span>S</span>
+        </div>
+        <div class="loader-bar">
+          <div class="loader-progress"></div>
+        </div>
+      </div>
+    <!-- Nagłówek -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">Tomasz<span>Szmajda</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#skills">Umiejętności</a></li>
+                    <li><a href="#certificates">Certyfikaty</a></li>
+                    <li><a href="#projects">Projekty</a></li>
+                    <li><a href="#about">O mnie</a></li>
+                    <li><a href="#contact" class="btn">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Sekcja Hero -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Cześć, jestem Tomasz Szmajda<br><span class="highlight">Freelance Developer</span></h1>
+                <p>Specjalizuję się w tworzeniu nowoczesnych rozwiązań IT. Łączę wiedzę techniczną z praktycznym podejściem biznesowym, dostarczając produkty, które realnie rozwiązują problemy użytkowników.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-main">Skontaktuj się</a>
+                    <a href="#projects" class="btn btn-outline">Zobacz portfolio</a>
+                </div>
+                
+                <div class="tech-stack">
+                    <span class="tech-item">WordPress</span>
+                    <span class="tech-item">HTML/CSS</span>
+                    <span class="tech-item">JavaScript</span>
+                    <span class="tech-item">SEO</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="photos/jatlo.PNG" alt="Tomasz Szmajda" class="profile-img">
+                    <div class="tech-bubbles">
+                        <span class="bubble" style="--i:1">WP</span>
+                        <span class="bubble" style="--i:2">CSS</span>
+                        <span class="bubble" style="--i:3">JS</span>
+                        <span class="bubble" style="--i:4">SEO</span>
+                    </div>
+                    <div class="glow-effect"></div>
+                </div>
+            </div>
+        </div>
+        <div id="particles-js"></div>
+    </section>
+
+    <!-- Sekcja SKILLS -->
+    <section class="skills-section" id="skills">
+        <div class="container">
+          <div class="section-title">
+            <h2>Moje Specjalizacje</h2>
+            <p>Technologie, w których się specjalizuję i stale rozwijam</p>
+          </div>
+          
+          <div class="skills-grid">
+            <!-- WordPress -->
+            <div class="skill-category">
+              <div class="skill-header">
+                <i class="fab fa-wordpress"></i>
+                <h3>WordPress</h3>
+              </div>
+              <ul class="skill-items">
+                <li>Tworzenie motywów</li>
+                <li>Dostosowywanie istniejących szablonów</li>
+                <li>Wtyczki (ACF, WooCommerce)</li>
+                <li>Optymalizacja wydajności</li>
+              </ul>
+            </div>
+            
+            <!-- Frontend -->
+            <div class="skill-category">
+              <div class="skill-header">
+                <i class="fas fa-code"></i>
+                <h3>Frontend</h3>
+              </div>
+              <ul class="skill-items">
+                <li>HTML5, CSS3, Sass</li>
+                <li>JavaScript (ES6+)</li>
+                <li>React.js podstawy</li>
+                <li>Responsive Web Design</li>
+              </ul>
+            </div>
+            
+            <!-- SEO -->
+            <div class="skill-category">
+              <div class="skill-header">
+                <i class="fas fa-search"></i>
+                <h3>SEO</h3>
+              </div>
+              <ul class="skill-items">
+                <li>Optymalizacja pod wyszukiwarki</li>
+                <li>Analiza konkurencji</li>
+                <li>Struktura semantic HTML</li>
+                <li>Google Search Console</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Sekcja certyfikaty -->
+      <section class="certificates" id="certificates">
+        <div class="container">
+          <div class="section-title">
+            <h2>Certyfikaty i Egzaminy</h2>
+            <p>Potwierdzenie moich kwalifikacji zawodowych</p>
+          </div>
+          
+          <div class="certificates-grid">
+            <div class="certificate-card">
+              <div class="certificate-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h3>Legacy Front End</h3>
+              <p>freeCodeCamp</p>
+              <span class="certificate-date">2025</span>
+              <button class="certificate-btn" data-pdf="certificates/inf03.pdf">
+                Zobacz certyfikat <i class="fas fa-expand"></i>
+              </button>
+            </div>
+            
+            <div class="certificate-card">
+              <div class="certificate-icon">
+                <i class="fas fa-file-alt"></i>
+              </div>
+              <h3>INF.02</h3>
+              <p>Administracja i eksploatacja systemów komputerowych</p>
+              <span class="certificate-date">2021</span>
+              <button class="certificate-btn" data-pdf="">
+                Zobacz certyfikat <i class="fas fa-expand"></i>
+              </button>
+            </div>
+            
+            <div class="certificate-card">
+              <div class="certificate-icon">
+                <i class="fas fa-file-alt"></i>
+              </div>
+              <h3>INF.03</h3>
+              <p>Tworzenie i administrowanie stronami internetowymi</p>
+              <span class="certificate-date">2021</span>
+              <button class="certificate-btn" data-pdf="">
+                Zobacz certyfikat <i class="fas fa-expand"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Sekcja Portfolio -->
+    <section class="wordpress-projects" id="projects">
+        <div class="container">
+          <div class="section-title">
+            <h2>Moje Projekty</h2>
+            <p>Realizacje, z których jestem szczególnie dumny</p>
+          </div>
+          
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="projects/centrumnowak.png" alt="Sklep internetowy">
+                <div class="project-overlay">
+                  <h3>CentrumNowak.pl</h3>
+                  <div class="project-tech">
+                    <span>WooCommerce</span>
+                    <span>Elementor Pro</span>
+                    <span>Custom Theme</span>
+                  </div>
+                  <a href="https://centrumnowak.pl" class="project-link">Zobacz online <i class="fas fa-external-link-alt"></i></a>
+                </div>
+              </div>
+              
+            </div>
+
+            <div class="projects-grid">
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="projects/moistry.png" alt="Sklep internetowy">
+                  <div class="project-overlay">
+                    <h3>Moistry.pl</h3>
+                    <div class="project-tech">
+                      <span>Shoper</span>
+                      <span>Custom CSS/HTML</span>
+                      <span>Custom Theme</span>
+                    </div>
+                    <a href="https://moistry.pl" class="project-link">Zobacz online <i class="fas fa-external-link-alt"></i></a>
+                  </div>
+                </div>
+              </div>
+            
+            <!-- Dodaj więcej projektów -->
+          </div>
+        </div>
+        <div class="projects-more">
+            <a href="https://github.com/TomKingRAKI" class="btn btn-outline" target="_blank">
+              <i class="fab fa-github"></i> Zobacz więcej na GitHub
+            </a>
+            <a href="" class="btn">
+              <i class="fas fa-folder-open"></i> Pełne portfolio
+            </a>
+          </div>
+      </section>
+
+
+    <!-- Sekcja O mnie -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>O Mnie</h2>
+                <p>Moja ścieżka rozwoju i specjalizacje</p>
+            </div>
+            <div class="about-container">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="photos/jatlo.PNG" alt="Tomasz Szmajda">
+                        <div class="tech-bubbles">
+                            <span class="bubble" style="--i:1">WP</span>
+                            <span class="bubble" style="--i:2">SEO</span>
+                            <span class="bubble" style="--i:3">CSS</span>
+                            <span class="bubble" style="--i:4">JS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h3>Technik Informatyk | WordPress Developer</h3>
+                    <p>Absolwent Technikum Informatycznego z pozytywnie zdanymi egzaminami INF.02 i INF.03. Specjalizuję się w tworzeniu nowoczesnych stron internetowych opartych na WordPress, łącząc techniczne umiejętności programistyczne z dbałością o UX/UI.</p>
+                    <p>Moje projekty charakteryzują się czystym kodem, responsywnością i optymalizacją pod kątem SEO. Stale rozwijam się w zakresie frontendu i wydajności stron internetowych.</p>
+                    
+                    <div class="skills-chart">
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>WordPress</span>
+                                <span data-count="90">0%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Frontend (HTML/CSS/JS)</span>
+                                <span data-count="80">0%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>SEO</span>
+                                <span data-count="75">0%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja Kontakt -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Kontakt</h2>
+                <p>Masz pytanie lub chcesz omówić projekt? Skontaktuj się ze mną!</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Dane Kontaktowe</h3>
+                    <p>Jestem otwarty na nowe wyzwania i współpracę. Jeśli masz projekt, który chciałbyś omówić, lub pytanie dotyczące moich usług, zapraszam do kontaktu.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Lokalizacja</h4>
+                                <p>Strzelce Opolskie, Polska</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <a href="mailto:tomasz.szmajda@example.com">tomszma14@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Telefon</h4>
+                                <a href="tel:+48123456789">+48 503 676 698</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/tomasz-szmajda-259337305/" target="_blank">linkedin.com/in/tomasz-szmajda</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form" >
+                    <form id="contactForm" method="POST" action="send_email.php">
+                        <input type="text" name="name" placeholder="Imię i Nazwisko" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="text" name="subject" placeholder="Temat">
+                        <textarea name="message" placeholder="Twoja wiadomość" required></textarea>
+                        <button type="submit" class="btn">Wyślij wiadomość</button>
+                        <div id="contactFormResponse" class="form-response"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stopka -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>Tomasz Szmajda</h4>
+                    <p>Freelance Developer specjalizujący się w tworzeniu rozwiązań IT łączących technologię z biznesem.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/tomasz-szmajda-259337305/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/TomKingRAKI"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/tom.king.e/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/tomasz.szmajda.58/"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Umiejętności</h4>
+                    <ul>
+                        <li><a href="#skills"><i class="fas fa-chevron-right"></i> WordPress</a></li>
+                        <li><a href="#skills"><i class="fas fa-chevron-right"></i> SEO</a></li>
+                        <li><a href="#skills"><i class="fas fa-chevron-right"></i> Frontend</a></li>
+                    </ul>
+                    
+                </div>
+                <div class="footer-col">
+                    <h4>Szybkie linki</h4>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#skills"><i class="fas fa-chevron-right"></i> Umiejętności</a></li>
+                        <li><a href="#certificates"><i class="fas fa-chevron-right"></i> Certyfikaty</a></li>
+                        <li><a href="#projects"><i class="fas fa-chevron-right"></i> Projekty</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> O mnie</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Zapisz się do mojego newslettera, aby otrzymywać informacje o nowych usługach i projektach.</p>
+                    <div class="contact-form">
+                        <form id="newsletterForm" method="POST" action="newsletter.php">
+                            <input type="email" name="email" placeholder="Twój email" required>
+                            <button type="submit" class="btn">Zapisz się</button>
+                            <div id="newsletterResponse" class="form-response"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Tomasz Szmajda. Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+        <div id="particles-js"></div>
+    </footer>
+
+    <div class="pdf-loader">
+        <div class="loader-spinner"></div>
+        <p>Ładowanie certyfikatu...</p>
+      </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <iframe id="certificate-frame" frameborder="0"></iframe>
+          <div class="modal-actions">
+            <a id="download-btn" class="btn" download>Pobierz certyfikat</a>
+          </div>
+        </div>
+      </div>
+
+      
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="scripts.js"></script>
+    
+</body>
+</html>
