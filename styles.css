@@ -334,6 +334,17 @@
         width: 100%;
         justify-content: center;
     }
+
+    .image-container {
+        height: auto; 
+        max-height: 600px; 
+    }
+
+    .profile-img {
+        width: 100%; 
+        height: auto; 
+        max-width: 500px; 
+    }
     
     .tech-stack {
         justify-content: center;
