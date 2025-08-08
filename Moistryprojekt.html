@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moistry.pl | Tomasz Szmajda</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <div id="global-loader">
+        <div class="loader-logo"><span>T</span><span>S</span></div>
+        <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+
+    <header>
+        <div class="container header-container">
+            <div class="logo">Tomasz<span>Szmajda</span></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#skills">Umiejętności</a></li>
+                    <li><a href="index.html#certificates">Certyfikaty</a></li>
+                    <li><a href="index.html#projects">Projekty</a></li>
+                    <li><a href="index.html#about">O mnie</a></li>
+                    <li><a href="index.html#contact" class="btn">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-detail">
+        <div id="particles-js-project-detail"></div>
+        <div class="container">
+            <!-- Nagłówek projektu -->
+            <div class="project-detail-header-updated">
+                <div class="project-header-image-container">
+                    <img src="projects/moistry.jpg" alt="Moistry.pl" class="project-main-image-updated">
+                </div>
+                <div class="project-header-info-container">
+                    <h1>Moistry.pl</h1>
+                    <p class="project-subtitle">Sklep WooCommerce – implementacja techniczna</p>
+                    <div class="project-meta">
+                        <div class="meta-item"><i class="fas fa-calendar-alt"></i><span>Data realizacji: Czerwiec 2025</span></div>
+                        <div class="meta-item"><i class="fas fa-user-cog"></i><span>Rola: WordPress Developer</span></div>
+                        <div class="meta-item"><i class="fas fa-external-link-alt"></i><a href="https://moistry.pl" target="_blank">Live Demo</a></div>
+                    </div>
+                    <a href="index.html#projects" class="btn btn-back"><i class="fas fa-arrow-left"></i> Powrót do portfolio</a>
+                </div>
+            </div>
+
+            <div class="project-detail-content-updated">
+                <!-- O projekcie -->
+                <section class="project-section-layout about-project-layout">
+                    <div class="section-icon-lg"><i class="fas fa-info-circle"></i></div>
+                    <h2>O projekcie</h2>
+                    <div class="about-project-grid">
+                        <div class="about-text">
+                            <p>Projekt sklepu Moistry.pl opiera się na WordPress i WooCommerce, dostosowanym od podstaw poprzez utworzenie Child Theme. Wszystkie elementy szablonu zostały zmodyfikowane, aby spełnić wymagania klienta i zachować spójność wizualną.</p>
+                            <p>Całość wdrożenia uwzględniała konfigurację produktów, filtrów AJAX, płatności oraz optymalizację wydajności, gwarantując szybkie i responsywne doświadczenie dla użytkowników.</p>
+                        </div>
+                        <div class="about-key-points">
+                            <h3>Kluczowe Cele:</h3>
+                            <ul>
+                                <li><i class="fas fa-clone"></i> Utworzenie Child Theme i dostosowanie szablonu WordPress</li>
+                                <li><i class="fas fa-cogs"></i> Konfiguracja WooCommerce z kategoriami i atrybutami produktów</li>
+                                <li><i class="fas fa-filter"></i> Implementacja zaawansowanych filtrów AJAX dla szybkiego wyszukiwania</li>
+                                <li><i class="fas fa-credit-card"></i> Integracja płatności PayU i Przelewy24 z obsługą webhooków</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Główne funkcjonalności -->
+                <section class="project-section-layout features-project-layout">
+                    <div class="section-icon-lg"><i class="fas fa-cogs"></i></div>
+                    <h2>Główne Funkcjonalności</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <i class="fas fa-clone"></i>
+                            <h3>Child Theme</h3>
+                            <p>Dostosowanie motywu Underscores bez modyfikacji oryginalnych plików.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-shopping-cart"></i>
+                            <h3>WooCommerce</h3>
+                            <p>Tworzenie niestandardowych produktów, atrybutów i ról użytkowników.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-filter"></i>
+                            <h3>Filtry AJAX</h3>
+                            <p>Płynne filtrowanie produktów bez przeładowania strony.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-credit-card"></i>
+                            <h3>Płatności</h3>
+                            <p>Integracja PayU i Przelewy24 oraz obsługa powiadomień webhook.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-rocket"></i>
+                            <h3>Optymalizacja</h3>
+                            <p>Lazy-load, minifikacja CSS/JS, integracja WP Rocket.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h3>Responsywność</h3>
+                            <p>Projekt mobile-first i dostępność ARIA roles.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Technologie -->
+                <section class="project-section-layout tech-project-layout">
+                    <div class="section-icon-lg"><i class="fas fa-tools"></i></div>
+                    <h2>Użyte Technologie</h2>
+                    <div class="tech-groups">
+                        <div class="tech-group"><h4>WordPress & WooCommerce:</h4>
+                            <span class="tech-tag"><i class="fab fa-wordpress-simple"></i> WP 6.x</span>
+                            <span class="tech-tag"><i class="fab fa-woocommerce"></i> WooCommerce</span>
+                        </div>
+                        <div class="tech-group"><h4>Frontend:</h4>
+                            <span class="tech-tag"><i class="fab fa-html5"></i> HTML5</span>
+                            <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS3/SCSS</span>
+                            <span class="tech-tag"><i class="fab fa-js-square"></i> JavaScript ES6</span>
+                        </div>
+                        <div class="tech-group"><h4>Inne:</h4>
+                            <span class="tech-tag"><i class="fas fa-lock"></i> PayU / Przelewy24 API</span>
+                            <span class="tech-tag"><i class="fas fa-rocket"></i> WP Rocket, GitHub Actions</span>
+                            <span class="tech-tag"><i class="fas fa-database"></i> MySQL</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Galeria projektu -->
+                <section class="project-section-layout gallery-project-layout">
+                    <div class="section-icon-lg"><i class="fas fa-images"></i></div>
+                    <h2>Galeria projektu</h2>
+                    <div class="carousel-container">
+                        <div class="carousel-slide"><img src="projects/moistry-1.jpg" alt="Strona główna Moistry"></div>
+                        <div class="carousel-slide"><img src="projects/moistry-2.jpg" alt="Karta produktu Moistry"></div>
+                        <div class="carousel-slide"><img src="projects/moistry-3.jpg" alt="Sekcja FAQ Moistry"></div>
+                        <button class="carousel-prev" aria-label="Poprzedni slajd">&#10094;</button>
+                        <button class="carousel-next" aria-label="Następny slajd">&#10095;</button>
+                        <div class="carousel-dots"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>Tomasz Szmajda</h4>
+                    <p>Freelance Developer specjalizujący się w tworzeniu rozwiązań IT łączących technologię z biznesem.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/tomasz-szmajda-259337305/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/TomKingRAKI" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/tom.king.e/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/tomasz.szmajda.58/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Umiejętności</h4>
+                    <ul>
+                        <li><a href="index.html#skills"><i class="fas fa-chevron-right"></i> WordPress</a></li>
+                        <li><a href="index.html#skills"><i class="fas fa-chevron-right"></i> SEO</a></li>
+                        <li><a href="index.html#skills"><i class="fas fa-chevron-right"></i> Frontend</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Szybkie linki</h4>
+                    <ul>
+                        <li><a href="index.html#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="index.html#skills"><i class="fas fa-chevron-right"></i> Umiejętności</a></li>
+                        <li><a href="index.html#certificates"><i class="fas fa-chevron-right"></i> Certyfikaty</a></li>
+                        <li><a href="index.html#projects"><i class="fas fa-chevron-right"></i> Projekty</a></li>
+                        <li><a href="index.html#about"><i class="fas fa-chevron-right"></i> O mnie</a></li>
+                        <li><a href="index.html#contact"><i class="fas fa-chevron-right"></i> Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Zapisz się do mojego newslettera, aby otrzymywać informacje o nowych usługach i projektach.</p>
+                    <div class="contact-form">
+                        <form id="newsletterFormProjectPage" method="POST" action="newsletter.php">
+                            <input type="email" name="email" placeholder="Twój email" required>
+                            <button type="submit" class="btn">Zapisz się</button>
+                            <div id="newsletterResponseProjectPage" class="form-response"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Tomasz Szmajda. Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="project-particles-config.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
