@@ -1463,55 +1463,1452 @@
   .projects-more .btn i {
     margin-right: 10px;
   }
-/* Styl dla loadera formularza */
-#form-loader {
-    position: fixed;
+  
+  /* Strona szczegółów projektu */
+  
+       .project-detail {
+            position: relative;
+            padding: 120px 0 60px;
+            background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .project-detail-content h2 {
+            color: #fff;
+            font-size: 2rem;
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #800020;
+        }
+
+        .project-detail-content p {
+            color: #e0e0e0 !important;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+
+        .project-tech-stack span {
+            background: rgba(128,0,32,0.2);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+        }
+
+        .project-meta {
+            margin: 30px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #aaa;
+        }
+
+        .meta-item i {
+            color: #800020;
+            width: 25px;
+            text-align: center;
+        }
+
+        .project-tech-stack span {
+            background: rgba(128,0,32,0.3);
+            color: #fff;
+            padding: 10px 25px;
+            border: 1px solid #800020;
+        }
+
+        .project-gallery img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            border: 2px solid rgba(128,0,32,0.3);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        .project-gallery img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(128,0,32,0.3);
+        }
+
+        @media (max-width: 992px) {
+            .project-detail-header {
+                flex-direction: column;
+            }
+            
+            .project-detail-info {
+                width: 100%;
+            }
+        }
+
+        .meta-item span,
+        .meta-item a {
+            color: #fff !important;
+            font-size: 1rem;
+        }
+
+        .meta-item i {
+            font-size: 1.2rem;
+        }
+
+        .btn-outline {
+            border-width: 2px;
+            font-size: 1rem;
+            padding: 12px 30px;
+        }
+
+        /* Dodatkowe style dla podstrony projektu (projekt.html) */
+
+.project-detail {
+    padding-top: 120px; /* Aby treść nie była zasłonięta przez sticky header */
+    padding-bottom: 60px;
+    background-color: #121212; /* Dopasowanie tła do reszty strony */
+    position: relative; /* Dla particles.js */
+    z-index: 1;
+}
+
+.project-subtitle {
+    font-size: 1.1rem;
+    color: #aaa;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.project-detail-header {
+    display: flex;
+    gap: 40px; /* Zmniejszony odstęp */
+    margin-bottom: 50px; /* Zmniejszony margines */
+    align-items: flex-start; /* Lepsze wyrównanie przy różnej treści */
+}
+
+.project-detail-image {
+    flex: 0 0 45%; /* Proporcje dla obrazka */
+    max-width: 45%;
+}
+
+.project-main-image {
+    border-radius: 10px; /* Subtelne zaokrąglenie */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4); /* Mocniejszy cień */
+    border: 3px solid #800020; /* Akcent kolorystyczny */
+}
+
+.project-detail-info {
+    flex: 1;
+}
+
+.project-detail-info h1 {
+    font-size: 2.8rem; /* Lekko zmniejszony rozmiar H1 */
+    color: #fff;
+    margin-bottom: 10px; /* Zmniejszony margines */
+    border-bottom: 2px solid #800020;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.project-meta {
+    margin-top: 20px; /* Zmniejszony margines */
+    margin-bottom: 30px;
+}
+
+.meta-item {
+    font-size: 1rem; /* Ujednolicenie rozmiaru czcionki */
+    gap: 10px;
+}
+
+.meta-item i {
+    font-size: 1.1rem; /* Lekko powiększone ikony */
+    width: 22px; /* Dopasowanie szerokości */
+}
+.meta-item a {
+    color: #E0E0E0; /* Kolor linku */
+    transition: color 0.3s ease;
+}
+.meta-item a:hover {
+    color: #800020; /* Kolor linku po najechaniu */
+}
+
+.project-back-btn {
+    margin-top: 20px;
+    display: inline-flex; /* Aby ikona była w linii */
+    align-items: center;
+}
+
+.project-back-btn i {
+    margin-right: 8px;
+}
+
+.project-detail-content .project-section {
+    background-color: #1a1a1a; /* Tło dla sekcji */
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    border-left: 4px solid #800020; /* Akcent kolorystyczny */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.project-detail-content .project-section h2 {
+    font-size: 1.8rem; /* Rozmiar H2 w sekcjach */
+    color: #fff;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.project-detail-content .project-section h2 i {
+    color: #800020;
+}
+
+
+.project-detail-content p {
+    color: #ccc; /* Jaśniejszy kolor tekstu dla lepszej czytelności */
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.project-tech-stack-detailed {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px; /* Odstępy między tagami */
+    margin-top: 10px;
+}
+
+.tech-tag {
+    background-color: rgba(128, 0, 32, 0.2); /* Tło tagu */
+    color: #e0e0e0; /* Kolor tekstu */
+    padding: 8px 15px;
+    border-radius: 20px; /* Zaokrąglenie */
+    font-size: 0.9rem;
+    border: 1px solid rgba(128, 0, 32, 0.4);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+.tech-tag:hover {
+    background-color: rgba(128, 0, 32, 0.4);
+    transform: translateY(-2px);
+}
+
+.tech-tag i {
+    font-size: 1rem; /* Rozmiar ikon w tagach */
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Lepsze dopasowanie na mniejszych ekranach */
+    gap: 20px; /* Zmniejszony odstęp */
+}
+
+.project-gallery img {
+    border: 2px solid transparent; /* Usunięcie domyślnej ramki */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* Cień dla głębi */
+    transition: all 0.3s ease; /* Płynne przejścia */
+    cursor: pointer;
+}
+
+.project-gallery img:hover {
+    transform: scale(1.03);
+    border-color: #800020; /* Ramka po najechaniu */
+    box-shadow: 0 12px 25px rgba(128,0,32,0.3);
+}
+
+/* Sekcja opinii klienta */
+.client-testimonial .testimonial-box {
+    background-color: #222; /* Ciemniejsze tło dla kontrastu */
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid #800020; /* Akcent kolorystyczny */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.client-testimonial blockquote {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.client-testimonial blockquote p {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.client-testimonial blockquote::before {
+    content: "\f10d"; /* Ikona cudzysłowu FontAwesome */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #800020;
+    font-size: 2.5rem;
+    position: absolute;
+    left: -10px; /* Dopasuj pozycję */
+    top: -15px;  /* Dopasuj pozycję */
+    opacity: 0.2;
+}
+
+.client-testimonial footer {
+    text-align: right;
+}
+
+.client-testimonial cite {
+    font-size: 1rem;
+    color: #aaa;
+    font-style: normal;
+    font-weight: 600;
+}
+
+/* Lightbox dla galerii */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1001; /* Wyżej niż modal certyfikatów */
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.95); /* Ciemniejsze tło */
+  backdrop-filter: blur(5px);
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  width: auto;
+  max-width: 85%;
+  max-height: 85vh; /* Maksymalna wysokość obrazu */
+  animation-name: zoom;
+  animation-duration: 0.4s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0.8)}
+  to {transform:scale(1)}
+}
+
+.close-lightbox {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+.close-lightbox:hover,
+.close-lightbox:focus {
+  color: #bbb;
+  text-decoration: none;
+}
+
+/* Responsywność dla podstrony projektu */
+@media (max-width: 992px) {
+    .project-detail-header {
+        flex-direction: column;
+        align-items: center; /* Wyśrodkowanie na mniejszych ekranach */
+    }
+    .project-detail-image {
+        flex: 0 0 100%;
+        max-width: 80%; /* Zmniejszenie obrazka na tabletach */
+        margin-bottom: 30px;
+    }
+    .project-detail-info {
+        text-align: center; /* Wyśrodkowanie tekstu */
+    }
+    .project-detail-info h1 {
+       font-size: 2.4rem;
+       display: block; /* Aby obramowanie było na całą szerokość */
+       text-align: center;
+    }
+    .meta-item {
+        justify-content: center; /* Wyśrodkowanie meta itemów */
+    }
+    .project-back-btn {
+        margin: 20px auto 0; /* Wyśrodkowanie przycisku */
+    }
+}
+
+@media (max-width: 768px) {
+    .project-detail-content .project-section h2 {
+        font-size: 1.6rem;
+    }
+     .project-detail-image {
+        max-width: 100%;
+    }
+    .project-detail-info h1 {
+       font-size: 2rem;
+    }
+    .client-testimonial blockquote p {
+        font-size: 1rem;
+    }
+    .tech-tag {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+}
+
+/* Upewnienie się, że particles.js ma odpowiednie tło i pozycję */
+#particles-js-project, #particles-js-footer-project {
+    position: absolute; /* Zmienione z fixed na absolute, aby było wewnątrz sekcji */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Za treścią */
+    pointer-events: none;
+}
+
+/* Kontener stopki musi mieć position: relative, aby particles.js w stopce działało poprawnie */
+footer {
+    position: relative; /* Jeśli particles.js jest w stopce */
+    z-index: 1; /* Aby stopka była nad tłem particles.js głównej strony */
+}
+
+/* =========== NOWE STYLE DLA PODSTRONY PROJEKTU (projekt.html) =========== */
+
+/* Ogólne dla sekcji na podstronie projektu */
+.project-detail {
+    padding-top: 100px; /* Dostosuj, jeśli header jest wyższy */
+    padding-bottom: 60px;
+    background-color: #121212;
+    position: relative; /* Dla particles.js */
+    overflow-x: hidden; /* Zapobiega poziomemu scrollbarowi */
+}
+
+#particles-js-project-detail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Za treścią, ale nad tłem body */
+    pointer-events: none;
+}
+
+.project-detail > .container { /* Aby kontener był nad particles */
+    position: relative;
+    z-index: 1;
+}
+
+.project-detail-header-updated {
+    display: flex;
+    flex-wrap: wrap; /* Lepsza responsywność */
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 60px;
+    padding: 20px;
+    background-color: rgba(26, 26, 26, 0.8); /* Lekko przezroczyste tło dla header */
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.project-header-image-container {
+    flex: 1 1 40%; /* Elastyczność dla obrazka */
+    min-width: 300px; /* Minimalna szerokość */
+}
+
+.project-main-image-updated {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #800020;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.project-header-info-container {
+    flex: 1 1 55%; /* Elastyczność dla informacji */
+}
+
+.project-header-info-container h1 {
+    font-size: 2.6rem;
+    color: #fff;
+    margin-bottom: 10px;
+    border-bottom: none; /* Usunięcie dolnej linii, jeśli była */
+    padding-bottom: 0;
+    line-height: 1.2;
+}
+.project-header-info-container .project-subtitle {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+    margin-bottom: 20px;
+}
+.project-header-info-container .project-meta {
+    margin-bottom: 25px;
+}
+.project-header-info-container .meta-item {
+    color: #ccc;
+    font-size: 0.95rem;
+}
+.project-header-info-container .meta-item i {
+    color: #800020;
+}
+
+
+.project-section-layout {
+    background: rgba(30, 30, 30, 0.7); /* Lekko przezroczyste tło sekcji */
+    backdrop-filter: blur(5px); /* Efekt rozmycia tła (jeśli przeglądarka wspiera) */
+    padding: 35px 30px;
+    margin-bottom: 50px;
+    border-radius: 12px;
+    border: 1px solid rgba(128, 0, 32, 0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    position: relative; /* Dla ikon i innych elementów pozycjonowanych */
+    overflow: hidden; /* Dla estetyki */
+}
+
+.project-section-layout h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.project-section-layout h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 3px;
+    background-color: #800020;
+    border-radius: 2px;
+}
+
+.section-icon-lg { /* Duża ikona w tle sekcji */
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    font-size: 100px;
+    color: rgba(128, 0, 32, 0.08);
+    transform: rotate(-15deg);
+    z-index: -1;
+}
+
+
+/* Layout dla sekcji "O projekcie" */
+.about-project-layout .about-project-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.about-project-layout .about-text p {
+    color: #c5c5c5;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.about-project-layout .about-key-points {
+    background-color: rgba(0,0,0,0.2);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 3px solid #800020;
+}
+
+.about-project-layout .about-key-points h3 {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.about-project-layout .about-key-points ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.about-project-layout .about-key-points li {
+    color: #b0b0b0;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.about-project-layout .about-key-points li i {
+    color: #800020;
+    margin-right: 10px;
+    width: 20px; /* Dla wyrównania */
+}
+
+/* Layout dla sekcji "Główne Funkcjonalności" (karty) */
+.features-project-layout .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.features-project-layout .feature-card {
+    background-color: rgba(34, 34, 34, 0.8); /* Tło karty */
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(128,0,32,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features-project-layout .feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(128,0,32,0.2);
+}
+
+.features-project-layout .feature-card i {
+    font-size: 2.5rem;
+    color: #800020;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.features-project-layout .feature-card h3 {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.features-project-layout .feature-card p {
+    color: #b0b0b0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Layout dla sekcji "Użyte Technologie" */
+.tech-project-layout .tech-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.tech-project-layout .tech-group h4 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 12px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed rgba(128,0,32,0.5);
+    display: inline-block;
+}
+.tech-project-layout .tech-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.tech-tag-updated {
+    background-color: rgba(128, 0, 32, 0.25);
+    color: #e0e0e0;
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(128, 0, 32, 0.5);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+.tech-tag-updated:hover {
+    background-color: rgba(128, 0, 32, 0.5);
+    transform: scale(1.05);
+}
+.tech-tag-updated i {
+    font-size: 1rem;
+}
+
+
+/* Karuzela dla galerii */
+.gallery-project-layout .carousel-container {
+    position: relative;
+    max-width: 800px; /* Możesz dostosować */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #000; /* Tło dla obrazów, jeśli nie są pełne */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.gallery-project-layout .carousel-slide {
+    display: none; /* Ukrywamy wszystkie slajdy domyślnie */
+    width: 100%;
+    transition: opacity 0.5s ease-in-out; /* Płynne przejście */
+}
+.gallery-project-layout .carousel-slide.active {
+    display: block; /* Pokazujemy aktywny slajd */
+    animation: fadeInCarousel 0.7s; /* Animacja pojawiania się */
+}
+
+@keyframes fadeInCarousel {
+    from { opacity: 0.6; }
+    to { opacity: 1; }
+}
+
+.gallery-project-layout .carousel-slide img {
+    width: 100%;
+    height: auto; /* Zachowaj proporcje */
+    max-height: 500px; /* Maksymalna wysokość obrazu w karuzeli */
+    object-fit: contain; /* Aby cały obraz był widoczny, 'cover' dla wypełnienia */
+    display: block;
+}
+
+.gallery-project-layout .carousel-prev,
+.gallery-project-layout .carousel-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: none;
+}
+.gallery-project-layout .carousel-prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+.gallery-project-layout .carousel-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.gallery-project-layout .carousel-prev:hover,
+.gallery-project-layout .carousel-next:hover {
+    background-color: rgba(128, 0, 32, 0.8);
+}
+
+.gallery-project-layout .carousel-dots {
+    text-align: center;
+    padding: 15px 0;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.gallery-project-layout .carousel-dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+.gallery-project-layout .carousel-dot.active,
+.gallery-project-layout .carousel-dot:hover {
+    background-color: #800020;
+}
+
+
+/* Layout dla sekcji "Opinia Klienta" */
+.testimonial-project-layout .testimonial-card-updated {
+    background: linear-gradient(135deg, rgba(40,40,40,0.8) 0%, rgba(20,20,20,0.9) 100%);
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    text-align: center; /* Wyśrodkowanie tekstu */
+}
+.testimonial-project-layout .testimonial-quote-icon {
+    font-size: 3rem;
+    color: #800020;
+    opacity: 0.7;
+    margin-bottom: 15px;
+}
+.testimonial-project-layout .testimonial-card-updated p {
+    font-size: 1.15rem;
+    color: #e0e0e0;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+.testimonial-project-layout .testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Wyśrodkowanie autora */
+    gap: 15px;
+}
+.testimonial-project-layout .client-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #800020;
+    object-fit: cover;
+}
+.testimonial-project-layout .testimonial-author cite {
+    font-size: 1rem;
+    color: #ccc;
+    font-style: normal;
+    font-weight: 600;
+}
+
+/* Responsywność dla nowych layoutów */
+@media (max-width: 992px) {
+    .project-detail-header-updated {
+        flex-direction: column;
+        text-align: center;
+    }
+    .project-header-image-container,
+    .project-header-info-container {
+        flex: 1 1 100%; /* Pełna szerokość na mniejszych ekranach */
+    }
+    .project-header-info-container .project-meta {
+        justify-content: center;
+    }
+    .about-project-layout .about-project-grid {
+        grid-template-columns: 1fr; /* Jedna kolumna */
+    }
+    .about-project-layout .about-key-points {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-section-layout h2 {
+        font-size: 1.8rem;
+    }
+    .project-header-info-container h1 {
+        font-size: 2.2rem;
+    }
+    .features-project-layout .features-grid {
+        grid-template-columns: 1fr; /* Jedna kolumna dla kart funkcjonalności */
+    }
+     .gallery-project-layout .carousel-prev,
+    .gallery-project-layout .carousel-next {
+        font-size: 18px;
+        padding: 12px;
+    }
+    .gallery-project-layout .carousel-dot {
+        height: 10px;
+        width: 10px;
+    }
+    .testimonial-project-layout .testimonial-card-updated p {
+        font-size: 1.05rem;
+    }
+    .testimonial-project-layout .client-avatar {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* =========== NOWE STYLE DLA PODSTRONY PROJEKTU (projekt.html) =========== */
+
+/* Ogólne dla sekcji na podstronie projektu */
+.project-detail {
+    padding-top: 100px; /* Dostosuj, jeśli header jest wyższy */
+    padding-bottom: 60px;
+    background-color: #121212;
+    position: relative; /* Dla particles.js */
+    overflow-x: hidden; /* Zapobiega poziomemu scrollbarowi */
+}
+
+#particles-js-project-detail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Za treścią, ale nad tłem body */
+    pointer-events: none;
+}
+
+.project-detail > .container { /* Aby kontener był nad particles */
+    position: relative;
+    z-index: 1;
+}
+
+.project-detail-header-updated {
+    display: flex;
+    flex-wrap: wrap; /* Lepsza responsywność */
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 60px;
+    padding: 20px;
+    background-color: rgba(26, 26, 26, 0.8); /* Lekko przezroczyste tło dla header */
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.project-header-image-container {
+    flex: 1 1 40%; /* Elastyczność dla obrazka */
+    min-width: 300px; /* Minimalna szerokość */
+}
+
+.project-main-image-updated {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #800020;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.project-header-info-container {
+    flex: 1 1 55%; /* Elastyczność dla informacji */
+}
+
+.project-header-info-container h1 {
+    font-size: 2.6rem;
+    color: #fff;
+    margin-bottom: 10px;
+    border-bottom: none; /* Usunięcie dolnej linii, jeśli była */
+    padding-bottom: 0;
+    line-height: 1.2;
+}
+.project-header-info-container .project-subtitle {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+    margin-bottom: 20px;
+}
+.project-header-info-container .project-meta {
+    margin-bottom: 25px;
+}
+.project-header-info-container .meta-item {
+    color: #ccc;
+    font-size: 0.95rem;
+}
+.project-header-info-container .meta-item i {
+    color: #800020;
+}
+
+
+.project-section-layout {
+    background: rgba(30, 30, 30, 0.7); /* Lekko przezroczyste tło sekcji */
+    backdrop-filter: blur(5px); /* Efekt rozmycia tła (jeśli przeglądarka wspiera) */
+    padding: 35px 30px;
+    margin-bottom: 50px;
+    border-radius: 12px;
+    border: 1px solid rgba(128, 0, 32, 0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    position: relative; /* Dla ikon i innych elementów pozycjonowanych */
+    overflow: hidden; /* Dla estetyki */
+}
+
+.project-section-layout h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.project-section-layout h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 3px;
+    background-color: #800020;
+    border-radius: 2px;
+}
+
+.section-icon-lg { /* Duża ikona w tle sekcji */
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    font-size: 100px;
+    color: rgba(128, 0, 32, 0.08);
+    transform: rotate(-15deg);
+    z-index: -1;
+}
+
+
+/* Layout dla sekcji "O projekcie" */
+.about-project-layout .about-project-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.about-project-layout .about-text p {
+    color: #c5c5c5;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.about-project-layout .about-key-points {
+    background-color: rgba(0,0,0,0.2);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 3px solid #800020;
+}
+
+.about-project-layout .about-key-points h3 {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.about-project-layout .about-key-points ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.about-project-layout .about-key-points li {
+    color: #b0b0b0;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.about-project-layout .about-key-points li i {
+    color: #800020;
+    margin-right: 10px;
+    width: 20px; /* Dla wyrównania */
+}
+
+/* Layout dla sekcji "Główne Funkcjonalności" (karty) */
+.features-project-layout .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.features-project-layout .feature-card {
+    background-color: rgba(34, 34, 34, 0.8); /* Tło karty */
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(128,0,32,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features-project-layout .feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(128,0,32,0.2);
+}
+
+.features-project-layout .feature-card i {
+    font-size: 2.5rem;
+    color: #800020;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.features-project-layout .feature-card h3 {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.features-project-layout .feature-card p {
+    color: #b0b0b0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Layout dla sekcji "Użyte Technologie" */
+.tech-project-layout .tech-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.tech-project-layout .tech-group h4 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 12px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed rgba(128,0,32,0.5);
+    display: inline-block;
+}
+.tech-project-layout .tech-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.tech-tag-updated {
+    background-color: rgba(128, 0, 32, 0.25);
+    color: #e0e0e0;
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(128, 0, 32, 0.5);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+.tech-tag-updated:hover {
+    background-color: rgba(128, 0, 32, 0.5);
+    transform: scale(1.05);
+}
+.tech-tag-updated i {
+    font-size: 1rem;
+}
+
+
+/* Karuzela dla galerii */
+.gallery-project-layout .carousel-container {
+    position: relative;
+    max-width: 800px; /* Możesz dostosować */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #000; /* Tło dla obrazów, jeśli nie są pełne */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.gallery-project-layout .carousel-slide {
+    display: none; /* Ukrywamy wszystkie slajdy domyślnie */
+    width: 100%;
+    transition: opacity 0.5s ease-in-out; /* Płynne przejście */
+}
+.gallery-project-layout .carousel-slide.active {
+    display: block; /* Pokazujemy aktywny slajd */
+    animation: fadeInCarousel 0.7s; /* Animacja pojawiania się */
+}
+
+@keyframes fadeInCarousel {
+    from { opacity: 0.6; }
+    to { opacity: 1; }
+}
+
+.gallery-project-layout .carousel-slide img {
+    width: 100%;
+    height: auto; /* Zachowaj proporcje */
+    max-height: 500px; /* Maksymalna wysokość obrazu w karuzeli */
+    object-fit: contain; /* Aby cały obraz był widoczny, 'cover' dla wypełnienia */
+    display: block;
+}
+
+.gallery-project-layout .carousel-prev,
+.gallery-project-layout .carousel-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: none;
+}
+.gallery-project-layout .carousel-prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+.gallery-project-layout .carousel-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.gallery-project-layout .carousel-prev:hover,
+.gallery-project-layout .carousel-next:hover {
+    background-color: rgba(128, 0, 32, 0.8);
+}
+
+.gallery-project-layout .carousel-dots {
+    text-align: center;
+    padding: 15px 0;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.gallery-project-layout .carousel-dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+.gallery-project-layout .carousel-dot.active,
+.gallery-project-layout .carousel-dot:hover {
+    background-color: #800020;
+}
+
+
+/* Layout dla sekcji "Opinia Klienta" */
+.testimonial-project-layout .testimonial-card-updated {
+    background: linear-gradient(135deg, rgba(40,40,40,0.8) 0%, rgba(20,20,20,0.9) 100%);
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    text-align: center; /* Wyśrodkowanie tekstu */
+}
+.testimonial-project-layout .testimonial-quote-icon {
+    font-size: 3rem;
+    color: #800020;
+    opacity: 0.7;
+    margin-bottom: 15px;
+}
+.testimonial-project-layout .testimonial-card-updated p {
+    font-size: 1.15rem;
+    color: #e0e0e0;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+.testimonial-project-layout .testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Wyśrodkowanie autora */
+    gap: 15px;
+}
+.testimonial-project-layout .client-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #800020;
+    object-fit: cover;
+}
+.testimonial-project-layout .testimonial-author cite {
+    font-size: 1rem;
+    color: #ccc;
+    font-style: normal;
+    font-weight: 600;
+}
+
+/* Responsywność dla nowych layoutów */
+@media (max-width: 992px) {
+    .project-detail-header-updated {
+        flex-direction: column;
+        text-align: center;
+    }
+    .project-header-image-container,
+    .project-header-info-container {
+        flex: 1 1 100%; /* Pełna szerokość na mniejszych ekranach */
+    }
+    .project-header-info-container .project-meta {
+        justify-content: center;
+    }
+    .about-project-layout .about-project-grid {
+        grid-template-columns: 1fr; /* Jedna kolumna */
+    }
+    .about-project-layout .about-key-points {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-section-layout h2 {
+        font-size: 1.8rem;
+    }
+    .project-header-info-container h1 {
+        font-size: 2.2rem;
+    }
+    .features-project-layout .features-grid {
+        grid-template-columns: 1fr; /* Jedna kolumna dla kart funkcjonalności */
+    }
+     .gallery-project-layout .carousel-prev,
+    .gallery-project-layout .carousel-next {
+        font-size: 18px;
+        padding: 12px;
+    }
+    .gallery-project-layout .carousel-dot {
+        height: 10px;
+        width: 10px;
+    }
+    .testimonial-project-layout .testimonial-card-updated p {
+        font-size: 1.05rem;
+    }
+    .testimonial-project-layout .client-avatar {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+/* =========== STYLE DLA PODSTRONY PEŁNE PORTFOLIO (pelne-portfolio.html) =========== */
+
+.full-portfolio-section {
+    padding-top: 120px; /* Dostosuj do wysokości nagłówka */
+    padding-bottom: 80px;
+    background-color: #121212; /* Główne tło */
+    position: relative; /* Dla particles.js */
+    min-height: 100vh;
+}
+
+#particles-js-full-portfolio {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.full-portfolio-section > .container {
+    position: relative;
+    z-index: 1; /* Treść nad particles */
+}
+
+.portfolio-page-title {
+    margin-bottom: 60px; /* Większy odstęp pod tytułem strony */
+}
+.portfolio-page-title h2 {
+    font-size: 2.8rem; /* Większy tytuł strony */
+    color: #fff;
+}
+.portfolio-page-title p {
+    font-size: 1.1rem;
+    color: #aaa;
+}
+
+.full-portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dwie kolumny */
+    gap: 35px; /* Odstęp między kartami */
+}
+
+.portfolio-card-full {
+    background-color: #1e1e1e; /* Tło karty */
+    border-radius: 12px;
+    overflow: hidden; /* Aby overlay nie wychodził poza kartę */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative; /* Dla pozycjonowania overlay */
+}
+
+.portfolio-card-full:hover {
+    transform: translateY(-12px) scale(1.02); /* Efekt lekkiego uniesienia i powiększenia */
+    box-shadow: 0 18px 45px rgba(128, 0, 32, 0.25); /* Cień w kolorze akcentu */
+}
+
+.portfolio-card-image-wrapper {
+    position: relative;
+    height: 280px; /* Stała wysokość dla obrazka */
+    overflow: hidden; /* Aby obrazek nie wychodził */
+}
+
+.portfolio-card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Obrazek wypełnia kontener, przycinając się */
+    transition: transform 0.5s ease-out, filter 0.5s ease-out;
+}
+
+.portfolio-card-full:hover .portfolio-card-image-wrapper img {
+    transform: scale(1.15); /* Zoom obrazka przy najechaniu */
+    filter: brightness(0.7); /* Lekkie przyciemnienie obrazka */
+}
+
+.portfolio-card-overlay {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background: linear-gradient(to top, rgba(18, 18, 18, 0.9) 0%, rgba(18, 18, 18, 0.3) 60%, transparent 100%);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    transition: opacity 0.5s ease;
+    justify-content: flex-end; /* Treść overlay na dole */
+    align-items: center; /* Wyśrodkowanie w poziomie */
+    padding: 25px;
+    opacity: 0; /* Domyślnie niewidoczny */
+    transform: translateY(20px); /* Lekko przesunięty w dół */
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    text-align: center;
 }
 
-#form-loader .loader-spinner {
-    border: 5px solid #f3f3f3;
-    border-top: 5px solid #3498db;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1s linear infinite;
-    margin-bottom: 15px;
+.portfolio-card-full:hover .portfolio-card-overlay {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-#form-loader p {
+.portfolio-card-overlay .overlay-content h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.portfolio-card-overlay .overlay-content p {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+.btn-overlay { /* Styl dla przycisku w overlay */
+    padding: 10px 22px;
+    background-color: #800020;
     color: white;
-    font-size: 18px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid transparent;
 }
 
-/* Styl dla odpowiedzi formularza */
-.form-response {
-    margin-top: 15px;
-    padding: 10px;
-    border-radius: 4px;
+.btn-overlay:hover {
+    background-color: #600018;
+    transform: scale(1.05);
+    border-color: #800020; /* Można usunąć, jeśli btn-overlay jest na stałe z tłem */
 }
 
-.form-response.success {
-    background-color: #d4edda;
-    color: #155724;
+
+.portfolio-card-info {
+    padding: 20px;
+    background-color: #1a1a1a; /* Lekko jaśniejsze tło dla informacji */
 }
 
-.form-response.error {
-    background-color: #f8d7da;
-    color: #721c24;
+.portfolio-card-info h4 {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.tech-tags-mini {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tags-mini span {
+    background-color: rgba(128, 0, 32, 0.2);
+    color: #b0b0b0;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.75rem; /* Mniejsze tagi */
+    border: 1px solid rgba(128, 0, 32, 0.3);
+}
+
+/* Responsywność dla siatki portfolio */
+@media (max-width: 992px) {
+    .full-portfolio-grid {
+        grid-template-columns: 1fr; /* Jedna kolumna na tabletach */
+        gap: 30px;
+    }
+    .portfolio-card-image-wrapper {
+        height: 250px; /* Dostosuj wysokość obrazka dla jednej kolumny */
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-page-title h2 {
+        font-size: 2.2rem;
+    }
+    .portfolio-card-overlay .overlay-content h3 {
+        font-size: 1.6rem;
+    }
+     .portfolio-card-image-wrapper {
+        height: 220px;
+    }
 }
